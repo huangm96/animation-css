@@ -1,0 +1,51 @@
+.button {
+  width: 100px;
+  border: 2px solid black;
+  padding: 10px 5px;
+}
+.button1 {
+  position: relative;
+  overflow: hidden;
+}
+
+.button1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: orange;
+  z-index: -1;
+  transform-origin: bottom left;
+  transform: rotate(-90deg);
+  transition: transform 1s;
+}
+
+.button1:hover::before {
+  transform: rotate(0deg);
+}
+
+.button2 {
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+.button2::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: brown;
+  z-index: -1;
+  transform: translate(-100%);
+  transition: all 1s;
+}
+.button2:hover {
+  color: white;
+}
+.button2:hover::before {
+  transform: translate(0);
+}
