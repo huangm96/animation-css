@@ -2,6 +2,7 @@
   width: 100px;
   border: 2px solid black;
   padding: 10px 5px;
+  margin: 10px;
 }
 .button1 {
   position: relative;
@@ -48,4 +49,105 @@
 }
 .button2:hover::before {
   transform: translate(0);
+}
+
+.button3 {
+  position: relative;
+  transition: all 1s;
+}
+
+.button3::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  z-index: -1;
+  transform: rotateX(90deg);
+  transition: all 1s;
+}
+.button3:hover::before {
+  transform: rotateX(0deg);
+}
+.button3:hover {
+  color: white;
+}
+
+.button4 {
+  position: relative;
+  transition: all 1s;
+}
+
+.button4::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  z-index: -1;
+  transform: rotateX(90deg);
+  transition: all 1s;
+}
+.button4::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+  z-index: -1;
+  transform: rotateY(90deg);
+  transition: all 1s;
+}
+.button4:hover::before {
+  transform: rotateX(0deg);
+}
+.button4:hover::after {
+  transform: rotateY(0deg);
+}
+.button4:hover {
+  color: white;
+}
+
+.button5 {
+  border: 1px solid red;
+  font-weight: 300;
+  color: red;
+  transition: all 0.5s;
+}
+.button5:hover {
+  border: 5px solid red;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin: -4px;
+}
+
+.button6 {
+  position: relative;
+  background-color: black;
+  color: white;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+.button6::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30%;
+  width: 100%;
+  background-color: white;
+  transform: translateX(-100%) rotate(45deg);
+  transition: all 0.5s;
+}
+.button6:hover::before {
+  transform: translateX(100%) rotate(45deg);
+}
+.button6:hover {
+  background-color: red;
 }
